@@ -1,5 +1,10 @@
-// Define configuraciones globales
-export const AppConfig = {
-  apiEndpoint: 'http://localhost:3000/api',
-  appTitle: 'Mi Aplicación Angular'
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter } from '@angular/router';
+
+import { appRoutes } from './app.routes'; // Asegúrate de importar appRoutes y no 'routes'
+
+import { provideClientHydration } from '@angular/platform-browser';
+
+export const appConfig: ApplicationConfig = {
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(appRoutes), provideClientHydration()]
 };
