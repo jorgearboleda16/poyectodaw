@@ -1,43 +1,9 @@
-/* app.component.css */
-
-body {
-    margin: 0;
+.main-content {
+    margin-left: 50px; /* Default margin when sidebar is closed */
+    transition: margin-left 0.3s;
   }
   
-  .wrapper {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-  
-  .sidebar {
-    position: fixed;
-    width: 250px;
-    height: 100%;
-    background-color: #343a40;
-    color: white;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    overflow-y: auto; /* Permite desplazamiento vertical */
-    padding-top: 20px;
-  }
-  
-  .sidebar a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 15px;
-    border-bottom: 1px solid #444;
-  }
-  
-  .sidebar a:hover {
-    background-color: #495057;
-  }
-  
-  .content {
-    margin-left: 250px; /* Deja espacio para el sidebar */
-    padding: 20px;
-    flex: 1;
+  .sidebar.open ~ .main-content {
+    margin-left: 210px; /* Margin when sidebar is open */
   }
   

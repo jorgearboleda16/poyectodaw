@@ -1,14 +1,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<div class="wrapper">
-  <nav class="sidebar">
-    <h2 class="p-3">Menu</h2>
-    <a routerLink="/" routerLinkActive="active">Home</a>
-    <a routerLink="/login" routerLinkActive="active" >Log In</a>
-    <a routerLink="/menu" routerLinkActive="active" >Menu</a>
-    <a routerLink="/reservaciones" routerLinkActive="active" >Reservaciones</a>
-    <a routerLink="/conocenos" routerLinkActive="active" >Conocenos</a>
-  </nav>
-  <div class="content">
-    <router-outlet></router-outlet>
-  </div>
+<app-navbar></app-navbar>
+<div class="main-content">
+  <router-outlet></router-outlet>
 </div>
+
+
+

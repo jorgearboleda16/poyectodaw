@@ -1,0 +1,35 @@
+.hero-section {
+    background: url('https://bagatelle.com/app/uploads/2024/03/Design-sans-titre-5.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-section .container {
+    max-width: 600px;
+  }
+  
+  .features-section {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .feature-box {
+    margin: 20px 0;
+  }
+  
+  .feature-box i {
+    color: #343a40;
+    margin-bottom: 10px;
+  }
+  
+  .about-section {
+    padding: 50px 0;
+  }
+  
+  .about-section img {
+    margin-bottom: 20px;
+  }
+  

@@ -1,0 +1,128 @@
+.sidebar {
+    position: fixed;
+    width: 72px; /* Menu closed by default */
+    height: 100%;
+    background-color: #f8f0ea;
+    color: #041e42;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: width 0.3s;
+    padding-top: 60px; /* Add padding to move the content down */
+  }
+  
+  .sidebar.open {
+    width: 210px;
+  }
+  
+  
+  
+  .sidebar-header h2 {
+    margin-left: 10px;
+    display: none; /* Hide "Menu" text by default */
+  }
+  
+  .sidebar.open .sidebar-header h2 {
+    display: block; /* Show "Menu" text when open */
+  }
+  
+  .sidebar-content {
+    margin-top: 40px; /* Increase margin to separate from the button */
+  }
+  
+  .sidebar a {
+    color: #041e42;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icons horizontally */
+    padding: 15px; /* Add more padding for better spacing */
+    border-bottom: 1px solid #444;
+  }
+  
+  .sidebar a:hover {
+    background-color: #e7dcd3;
+  }
+  
+  .sidebar a .icon {
+    font-size: 1.5rem; /* Adjust icon size if necessary */
+  }
+  
+  .sidebar.open a {
+    justify-content: flex-start; /* Align text to the left when open */
+  }
+  
+  .sidebar.open a .icon {
+    margin-right: 10px;
+  }
+  
+  .sidebar a .text {
+    display: none;
+  }
+  
+  .sidebar.open a .text {
+    display: inline;
+  }
+  
+  .content {
+    padding: 20px;
+    transition: margin-left 0.3s;
+    margin-left: 50px; /* Default margin when sidebar is closed */
+  }
+  
+  .sidebar.open ~ .content {
+    margin-left: 210px; /* Margin when sidebar is open */
+  }
+  
+  .hamburger {
+    position: fixed;
+    top: 10px;
+    left: 5px;
+    z-index: 1100;
+    background-color: #041e42;
+    color: #f8f0ea;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+    width: 3.75rem;
+    height: 3.75rem;
+    border: none;
+    outline: none; /* Remove default focus outline */
+  }
+  
+  .hamburger:focus {
+    outline: none; /* Remove focus outline */
+  }
+  
+  .hamburger.open {
+    background-color: #f8f0ea;
+    color: #041e42;
+  }
+  
+  .hamburger:hover {
+    background-color: #495057;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 50px;
+    }
+    .sidebar.open {
+      width: 210px;
+    }
+    .sidebar a .text {
+      display: none;
+    }
+    .content {
+      margin-left: 50px; /* No margin when sidebar is closed */
+    }
+    .sidebar.open ~ .content {
+      margin-left: 210px; /* Margin when sidebar is open */
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+  

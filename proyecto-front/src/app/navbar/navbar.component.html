@@ -1,0 +1,30 @@
+<div class="sidebar-header">
+  <button class="hamburger" [class.open]="isOpen" (click)="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </button>
+  <h2>Menu</h2> <!-- Align "Menu" with the button -->
+</div>
+<nav class="sidebar" [class.open]="isOpen">
+  <div class="sidebar-content">
+    <a routerLink="/" routerLinkActive="active">
+      <i class="fas fa-home icon"></i>
+      <span class="text">Home</span>
+    </a>
+    <a routerLink="/login" routerLinkActive="active">
+      <i class="fas fa-sign-in-alt icon"></i>
+      <span class="text">Log In</span>
+    </a>
+    <a routerLink="/menu" routerLinkActive="active">
+      <i class="fas fa-utensils icon"></i>
+      <span class="text">Menu</span>
+    </a>
+    <a routerLink="/reservaciones" routerLinkActive="active">
+      <i class="fas fa-calendar-alt icon"></i>
+      <span class="text">Reservaciones</span>
+    </a>
+    <a routerLink="/conocenos" routerLinkActive="active">
+      <i class="fas fa-info icon"></i>
+      <span class="text">Conocenos</span>
+    </a>
+  </div>
+</nav>
