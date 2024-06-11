@@ -6,6 +6,11 @@
     color: white;
     text-align: center;
   }
+
+  .img-fluid {
+      height: 500px;
+      width: 500px;
+  }
   
   .hero-section .container {
     max-width: 600px;
@@ -31,5 +36,57 @@
   
   .about-section img {
     margin-bottom: 20px;
+  }
+  .gallery-section {
+    padding: 50px 0;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  .gallery-section .gallery-item {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Tamaño de las imágenes */
+    overflow: hidden;
+  }
+  
+  .gallery-section .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .gallery-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .gallery-section .overlay .text {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .gallery-section .gallery-item:hover .overlay {
+    opacity: 1;
+  }
+  
+  .row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .row.no-gutters > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
   }
   
