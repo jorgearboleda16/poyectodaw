@@ -1,1 +1,12 @@
-<p>menu works!</p>
+<h1>Restaurant Menu</h1>
+
+<div class="menu-section" *ngFor="let item of displayedItems; let i = index; trackBy: trackByItemId">
+    <h2>{{ item.name }}</h2>
+    <ul>
+        <li>
+            <span class="item-name">{{ item.name }}</span>
+            <span class="item-description"> - {{ item.description }}</span>
+            <span class="item-price">${{ item.price }}</span>
+        </li>
+    </ul>
+</div>
