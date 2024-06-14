@@ -1,0 +1,37 @@
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer ul li a img {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+  }
+  
+  footer ul li a:hover img {
+    filter: brightness(0.8);
+  }
+
+  .search-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .search-form button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  .search-form input[type="search"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+  }
+  

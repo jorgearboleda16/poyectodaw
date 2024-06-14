@@ -8,11 +8,24 @@ import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { RegisterComponent } from './register/register.component';
 import { ReservacionesComponent } from './reservaciones/reservaciones.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ConocenosComponent,HomeComponent,LoginComponent,MenuComponent,RegisterComponent,ReservacionesComponent,RouterLink, CommonModule, NavbarComponent],
+  imports: [
+    RouterOutlet,
+    ConocenosComponent,
+    HomeComponent,
+    LoginComponent,
+    MenuComponent,
+    RegisterComponent,
+    ReservacionesComponent,
+    RouterLink, 
+    CommonModule, 
+    NavbarComponent,
+    FooterComponent
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
