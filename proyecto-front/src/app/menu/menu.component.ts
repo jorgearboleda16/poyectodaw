@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../servicios/menu.service';
-import { MenuItem } from '../menu';
+import { MenuItems } from '../menu-items';
 import { CommonModule } from '@angular/common';
+import { GroupedItems } from '../grouped-items';
 
 @Component({
   selector: 'app-menu',
@@ -16,14 +17,23 @@ export class MenuComponent implements OnInit {
     return item.id;
   }
 
-  menuItems: MenuItem[] = [];
-  displayedItems: MenuItem[] = [];
+  menuItems: MenuItems[] = [];
+  groupedItems: { [category: string]: MenuItems[] } = {};
 
   constructor(private menuService: MenuService) { }
 
   ngOnInit() {
     this.menuItems = this.menuService.getMenuItems();
-    const desiredCategories = ['Appetizers', 'Spring Rolls'];
-    this.displayedItems = this.menuItems.filter(item => item.category && desiredCategories.includes(item.category));
+    this.groupMenuItems();
+  }
+
+  groupMenuItems() {
+    this.groupedItems = this.menuItems.reduce((acc: GroupedItems, item: MenuItems) => {
+      if (item.category) {
+        acc[item.category] = acc[item.category] || [];
+        acc[item.category].push(item);
+      }
+      return acc;
+    }, {});
   }
 }
