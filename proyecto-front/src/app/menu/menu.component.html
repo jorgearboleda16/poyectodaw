@@ -3,10 +3,14 @@
 <div class="menu-section" *ngFor="let category of groupedItems | keyvalue">
     <h2>{{ category.key }}</h2>
     <ul>
-        <li *ngFor="let item of category.value">
-            <span class="item-name">{{ item.name }}</span>
-            <span class="item-description"> - {{ item.description }}</span>
-            <span class="item-price">${{ item.price }}</span>
+        <li *ngFor="let item of category.value"
+            style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+                <span class="item-name">{{ item.name }}</span>
+                <span class="item-description">{{ item.description }}</span>
+                <span class="item-price">${{ item.price }}</span>
+            </div>
+            <img src="{{ item.urlImagen }}" alt="{{ item.name }}" style="width: 100px; height: 100;">
         </li>
     </ul>
 </div>
