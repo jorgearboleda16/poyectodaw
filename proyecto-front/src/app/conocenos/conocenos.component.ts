@@ -20,11 +20,11 @@ export class ConocenosComponent {
       imagen: 'assets/images/Jorge.jpg'
     },
     {
-      nombre: 'Christian Zeas',
+      nombre: 'Cristhian Zeas',
       telefono: '555-5678',
-      email: 'christianz@example.com',
+      email: 'cristhianz@example.com',
       direccion: 'Avenida 456, Guayaquil, Ecuador',
-      imagen: 'assets/images/Christian.jpg'
+      imagen: 'assets/images/Cristhian.jpg'
     },
     {
       nombre: 'Daniel Gancino',
