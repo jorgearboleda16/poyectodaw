@@ -23,7 +23,7 @@ h2 {
 .menu-section ul {
     list-style-type: none;
     padding: 0;
-    margin-left: 600px;
+    margin-left: 450px;
 }
 
 .menu-section li {
@@ -34,7 +34,7 @@ h2 {
 }
 
 .menu-section img {
-    margin-right: 600px;
+    margin-right: 450px;
     width: 100px;
-    height: auto;
+    height: 100px;
 }
