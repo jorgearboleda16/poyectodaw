@@ -7,8 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { RegisterComponent } from './register/register.component';
-import { ReservacionesComponent } from './reservaciones/reservaciones.component';
 import { FooterComponent } from './footer/footer.component';
+import { ReservacionesComponent } from './reservaciones/reservaciones.component';
 
 @Component({
   selector: 'app-root',
@@ -20,11 +20,11 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     MenuComponent,
     RegisterComponent,
-    ReservacionesComponent,
     RouterLink, 
     CommonModule, 
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ReservacionesComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
