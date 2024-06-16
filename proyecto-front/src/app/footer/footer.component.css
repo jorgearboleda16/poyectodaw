@@ -1,31 +1,34 @@
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-
-  footer ul li a img {
-    width: 24px;
-    height: 24px;
-    margin: 10px;
+    background-color: #041e42;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px; /* Ajusta el tamaño de fuente del footer */
+    color: #ffffff ;
   }
   
-  footer ul li a:hover img {
-    filter: brightness(0.8);
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
   }
-
-  .search-form button[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  
+  .footer-left {
+    flex-basis: 45%;
   }
-
-  .search-form button[type="submit"]:hover {
-    background-color: #3e8e41;
+  
+  .footer-right {
+    flex-basis: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ajusta la alineación vertical de los elementos */
+  }
+  
+  .search-form {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
   }
   
   .search-form input[type="search"] {
@@ -35,3 +38,32 @@ footer {
     width: 200px;
   }
   
+  .search-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-form button[type="submit"]:hover {
+    background-color: #0033ff;
+  }
+  
+  .footer-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-left li {
+    margin-bottom: 10px;
+  }
+  
+  /* Ajusta el tamaño de los iconos de redes sociales */
+  .footer-right ul img {
+    width: 65px; /* Ajusta el ancho de los iconos */
+    height: 65px; /* Ajusta el alto de los iconos */
+    margin: 0 25px; /* Ajusta el margen entre los iconos */
+  }
