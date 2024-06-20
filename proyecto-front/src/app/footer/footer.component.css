@@ -23,32 +23,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center; /* Ajusta la alineación vertical de los elementos */
-  }
-  
-  .search-form {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-  }
-  
-  .search-form input[type="search"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
-  }
-  
-  .search-form button[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .search-form button[type="submit"]:hover {
-    background-color: #0033ff;
+    margin-left: 300px;
   }
   
   .footer-left ul {
@@ -65,5 +40,5 @@ footer {
   .footer-right ul img {
     width: 65px; /* Ajusta el ancho de los iconos */
     height: 65px; /* Ajusta el alto de los iconos */
-    margin: 0 25px; /* Ajusta el margen entre los iconos */
+    margin: 1 25px; /* Ajusta el margen entre los iconos */
   }
