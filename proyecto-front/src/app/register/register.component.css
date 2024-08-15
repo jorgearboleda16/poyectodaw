@@ -57,3 +57,7 @@
 .text-danger {
     color: red;
 }
+
+.custom-margin-bottom {
+    margin-bottom: 20px; /* Puedes ajustar el valor según el espacio que necesites */
+}
