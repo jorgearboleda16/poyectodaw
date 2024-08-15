@@ -1,41 +1,43 @@
 <div class="hero-section">
-    <div class="container">
-      <h1 class="display-4">Reservaciones</h1>
-      <p class="lead">Bagatelle Miami deslumbra a sus huéspedes con un toque de lujo en la Riviera Francesa en South Beach.</p>
-      <a href="#" class="btn btn-primary btn-lg">Haz una reservación</a>
+  <div class="container">
+    <h1 class="display-4">Reservaciones</h1>
+    <p class="lead">Bagatelle Miami deslumbra a sus huéspedes con un toque de lujo en la Riviera Francesa en South Beach.</p>
+  </div>
+</div>
+
+<form [formGroup]="reservationForm" (ngSubmit)="submitReservation()">
+<div class="calendar-section">
+  <div class="container">
+    <h2>Selecciona una fecha</h2>
+    <div class="calendar-container">
+      <input type="date" formControlName="selectedDate" class="form-control">
     </div>
   </div>
-  
-  <form [formGroup]="reservationForm">
-    <div class="calendar-section">
-      <div class="container">
-        <h2>Selecciona una fecha</h2>
-        <div class="calendar-container">
-          <input type="date" formControlName="selectedDate" class="form-control">
-        </div>
-      </div>
+</div>
+
+<div class="guests-section">
+  <div class="container">
+    <h2>Selecciona el número de invitados</h2>
+    <select formControlName="selectedGuests" class="form-control">
+      <option *ngFor="let guest of guestsOptions" [value]="guest">{{ guest }}</option>
+    </select>
+  </div>
+</div>
+
+<div class="time-section">
+  <div class="container">
+    <h2>Selecciona la hora</h2>
+    <div class="time-options">
+      <button *ngFor="let time of timeOptions" (click)="selectTime(time)" 
+        [class.active]="reservationForm.get('selectedTime')?.value === time" 
+        class="btn btn-outline-primary">
+        {{ time }}
+      </button>
     </div>
-  
-    <div class="guests-section">
-      <div class="container">
-        <h2>Selecciona el número de invitados</h2>
-        <select formControlName="selectedGuests" class="form-control">
-          <option *ngFor="let guest of guestsOptions" [value]="guest">{{ guest }}</option>
-        </select>
-      </div>
-    </div>
-  
-    <div class="time-section">
-      <div class="container">
-        <h2>Selecciona la hora</h2>
-        <div class="time-options">
-          <button *ngFor="let time of timeOptions" (click)="selectTime(time)" 
-            [class.active]="reservationForm.get('selectedTime')?.value === time" 
-            class="btn btn-outline-primary">
-            {{ time }}
-          </button>
-        </div>
-      </div>
-    </div>
-  </form>
-  
+  </div>
+</div>
+
+<div class="container">
+  <button type="submit" class="btn btn-primary btn-block" [disabled]="reservationForm.invalid">Confirmar Reservación</button>
+</div>
+</form>
