@@ -1,3 +1,5 @@
+// config/database.js
+
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
@@ -5,10 +7,10 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
     host: process.env.DB_HOST,
     dialect: 'mysql',
     dialectOptions: {
-        // Aquí puedes remover la opción 'allowPublicKeyRetrieval' si no es necesaria
+        allowPublicKeyRetrieval: true,
         ssl: {
-            rejectUnauthorized: false // Puedes mantener esto si es necesario para tu configuración SSL
-        }
+            rejectUnauthorized: false,
+        },
     },
     logging: false,
 });

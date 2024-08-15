@@ -1,0 +1,12 @@
+<div class="container mt-4">
+    <h2>Customer List</h2>
+    <ul class="list-group">
+      <li *ngFor="let customer of customers" class="list-group-item">
+        {{ customer.firstName }} {{ customer.lastName }} - {{ customer.email }}
+        <button class="btn btn-primary btn-sm float-right" (click)="editCustomer(customer.id)">
+          Edit
+        </button>
+      </li>
+    </ul>
+    <button class="btn btn-success mt-4" routerLink="/customers/new">Add New Customer</button>
+  </div>

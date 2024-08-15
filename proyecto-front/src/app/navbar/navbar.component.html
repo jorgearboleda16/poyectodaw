@@ -2,8 +2,9 @@
   <button class="hamburger" [class.open]="isOpen" (click)="toggleSidebar()">
     <i class="fas fa-bars"></i>
   </button>
-  <h2>Menu</h2> <!-- Align "Menu" with the button -->
+  <h2>Menu</h2>
 </div>
+
 <nav class="sidebar" [class.open]="isOpen">
   <div class="sidebar-content">
     <a routerLink="/" routerLinkActive="active">
@@ -25,6 +26,15 @@
     <a routerLink="/conocenos" routerLinkActive="active">
       <i class="fas fa-info icon"></i>
       <span class="text">Conocenos</span>
+    </a>
+    <!-- Nuevos enlaces para Restaurants y Customers -->
+    <a routerLink="/restaurants" routerLinkActive="active">
+      <i class="fas fa-store icon"></i>
+      <span class="text">Restaurants</span>
+    </a>
+    <a routerLink="/customers" routerLinkActive="active">
+      <i class="fas fa-users icon"></i>
+      <span class="text">Customers</span>
     </a>
   </div>
 </nav>

@@ -1,0 +1,12 @@
+<div class="container mt-4">
+    <h2>Restaurant List</h2>
+    <ul class="list-group">
+      <li *ngFor="let restaurant of restaurants" class="list-group-item">
+        {{ restaurant.name }} - {{ restaurant.location }} - {{ restaurant.capacity }} seats
+        <button class="btn btn-primary btn-sm float-right" (click)="editRestaurant(restaurant.id)">
+          Edit
+        </button>
+      </li>
+    </ul>
+    <button class="btn btn-success mt-4" routerLink="/restaurants/new">Add New Restaurant</button>
+  </div>

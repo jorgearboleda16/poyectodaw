@@ -6,6 +6,8 @@ import { RegisterComponent } from './register/register.component';
 import { ReservacionesComponent } from './reservaciones/reservaciones.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { RestaurantFormComponent } from './restaurant-form/restaurant-form.component';
+import { RestaurantListComponent } from './restaurant-list/restaurant-list.component';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +20,10 @@ import { FooterComponent } from './footer/footer.component';
     RegisterComponent,
     ReservacionesComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    RestaurantFormComponent,
+    RestaurantListComponent,
+    
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
